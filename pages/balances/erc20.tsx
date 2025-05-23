@@ -1,12 +1,10 @@
 import { Default } from 'components/layouts/Default';
-import { ERC20Balances } from 'components/templates/balances/ERC20';
+import PlaceholderPage from 'components/templates/PlaceholderPage';
 
-const ERC20 = () => {
-  return (
-    <Default pageName="ERC20 Balances">
-      <ERC20Balances />
-    </Default>
-  );
+const ERC20BalancesPage = () => {
+  return <PlaceholderPage title="ERC20 Balances" path="/balances/erc20" />;
 };
 
-export default ERC20;
+ERC20BalancesPage.getLayout = (page) => <Default pageName="ERC20 Balances">{page}</Default>;
+
+export default ERC20BalancesPage;

@@ -1,63 +1,44 @@
-import { CheckCircleIcon, SettingsIcon } from '@chakra-ui/icons';
-import { Heading, VStack, List, ListIcon, ListItem } from '@chakra-ui/react';
+import { VStack, Heading, Text, Box, useColorModeValue, SimpleGrid } from '@chakra-ui/react';
 
 const Home = () => {
   return (
-    <VStack w={'full'}>
-      <Heading size="md" marginBottom={6}>
-        Ethereum Boilerplate
-      </Heading>
-      <List spacing={3}>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          Moralis authentication
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          Display Transactions
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          Display ERC20 transfers
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          Display ERC20 balances
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          Display NFT balances
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          Display NFT transfers
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          Multichain Support
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          Using Moralis from client-side
-        </ListItem>
-        <ListItem>
-          <ListIcon as={SettingsIcon} color="green.500" />
-          Adding explorer links to balances, transactions ...
-        </ListItem>
-        <ListItem>
-          <ListIcon as={SettingsIcon} color="green.500" />
-          Better responsive design
-        </ListItem>
-        <ListItem>
-          <ListIcon as={SettingsIcon} color="green.500" />
-          Rainbowkit integration
-        </ListItem>
-        <ListItem>
-          <ListIcon as={SettingsIcon} color="green.500" />
-          ... and more
-        </ListItem>
-      </List>
-    </VStack>
+    <Box w="full">
+      {/* Logo removed */}
+      <VStack
+        minH="70vh"
+        justify="center"
+        align="center"
+        spacing={8}
+        bgGradient={useColorModeValue(
+          'linear(to-b, white, gray.50)',
+          'linear(to-b, gray.800, gray.900)'
+        )}
+      >
+        {/* Headline */}
+        <Heading size="2xl" color="teal.500" textAlign="center">
+          Welcome to Axadium
+        </Heading>
+        <Text fontSize="xl" color="gray.600" textAlign="center" maxW="lg">
+          The Future of DeFi Banking. Stake, borrow, and earn with next-generation digital assets.
+        </Text>
+
+        {/* Feature Highlights */}
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} mt={10} w="full" maxW="4xl">
+          <Box textAlign="center">
+            <Heading size="md" color="teal.400">Secure Staking</Heading>
+            <Text>Earn rewards with industry-leading security.</Text>
+          </Box>
+          <Box textAlign="center">
+            <Heading size="md" color="teal.400">Instant Loans</Heading>
+            <Text>Access liquidity without selling your assets.</Text>
+          </Box>
+          <Box textAlign="center">
+            <Heading size="md" color="teal.400">Multi-Asset Support</Heading>
+            <Text>Stake and borrow with ETH, ERC20, and more.</Text>
+          </Box>
+        </SimpleGrid>
+      </VStack>
+    </Box>
   );
 };
 
