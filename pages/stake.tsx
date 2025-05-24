@@ -1,7 +1,7 @@
 // C:\Users\ThinkPad x1 yoga\axa1-dapp\pages\stake.tsx
 
 import React from 'react';
-import Default from '@/layouts/Default';
+import { Default } from 'components/layouts/Default';
 
 export default function StakePage() {
   return (
