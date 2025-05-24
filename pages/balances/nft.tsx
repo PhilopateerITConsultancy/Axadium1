@@ -1,12 +1,11 @@
 import { Default } from 'components/layouts/Default';
-import { NFTBalances } from 'components/templates/balances/NFT';
+import PlaceholderPage from 'components/templates/PlaceholderPage';
+import { ReactNode } from 'react';
 
-const NFT = () => {
-  return (
-    <Default pageName="NFT Balances">
-      <NFTBalances />
-    </Default>
-  );
+const NFTBalancesPage = () => {
+  return <PlaceholderPage title="NFT Balances" path="/balances/nft" />;
 };
 
-export default NFT;
+NFTBalancesPage.getLayout = (page: ReactNode) => <Default pageName="NFT Balances">{page}</Default>;
+
+export default NFTBalancesPage;

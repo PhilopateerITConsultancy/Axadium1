@@ -1,12 +1,11 @@
 import { Default } from 'components/layouts/Default';
-import { NFTTransfers } from 'components/templates/transfers/NFT';
+import PlaceholderPage from 'components/templates/PlaceholderPage';
+import { ReactNode } from 'react';
 
 const NFTTransfersPage = () => {
-  return (
-    <Default pageName="NFT Transfers">
-      <NFTTransfers />
-    </Default>
-  );
+  return <PlaceholderPage title="NFT Transfers" path="/transfers/nft" />;
 };
+
+NFTTransfersPage.getLayout = (page: ReactNode) => <Default pageName="NFT Transfers">{page}</Default>;
 
 export default NFTTransfersPage;
