@@ -157,7 +157,7 @@ const ADMIN_NAV_LINKS = [
   },
 ];
 
-module.exports = {
+export {
   PUBLIC_NAV_LINKS,
   USER_NAV_LINKS,
   ADMIN_NAV_LINKS,

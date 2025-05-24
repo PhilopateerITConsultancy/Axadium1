@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { PUBLIC_NAV_LINKS, USER_NAV_LINKS, ADMIN_NAV_LINKS } = require('../src/components/elements/navigation/NavBar/paths');
+import { PUBLIC_NAV_LINKS, USER_NAV_LINKS, ADMIN_NAV_LINKS } from '../src/components/elements/navigation/NavBar/paths';
 
 const template = (title: string, route: string) => `import { Default } from 'components/layouts/Default';
 import PlaceholderPage from 'components/templates/PlaceholderPage';
